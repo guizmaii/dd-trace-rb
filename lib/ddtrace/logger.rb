@@ -17,7 +17,7 @@ module Datadog
 
       # We are in debug mode, or this is an error, add stack trace to help debugging
       if debug? || severity >= ::Logger::ERROR
-        c = caller
+        c = 1
         where = "(#{c[1]}) " if c.length > 1
       end
 
